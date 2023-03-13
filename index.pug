@@ -1,0 +1,209 @@
+doctype html
+html(lang="zxx")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(name='description' content='У нас вы можете заказать винтовые сваи с доставкой по всей России. Цены ниже рыночных на 10%. Самовывоз со склада в Тюмени и Кургане')
+		link(rel='shortcut icon' href='favicon.ico')
+		link(rel="stylesheet" href="css/reset.css")
+		link(rel="stylesheet" href="css/style.css")
+		title Винтовые сваи купить по выгодной цене
+	body
+		.wrapper
+			header.header.lock-padding
+				.header__container
+					.header__content
+						.header__left
+							a.header__logo(href='index.html')
+								img.header__logo-img(src='images/logo.png' alt='' loading='lazy')
+							span.header__line
+							.header__info
+								span.header__info-text Продажа винтовых свай
+								span.header__info-text доставка по всей России
+						.header__contacts
+							.header__contacts-icon
+								svg(width="18" height="18" viewBox="0 0 18 18")
+									path(d="M14.9625 15.75C15.0875 15.75 15.2187 15.747 15.3562 15.741C15.4937 15.7345 15.625 15.725 15.75 15.7125V11.325L12 10.575L9.825 12.75C8.875 12.175 8.003 11.4937 7.209 10.7062C6.4155 9.91875 5.75625 9.075 5.23125 8.175L7.36875 6.01875L6.675 2.25H2.2875C2.2625 2.375 2.25 2.50625 2.25 2.64375V3.0375C2.25 4.65 2.6095 6.22175 3.3285 7.75275C4.047 9.28425 4.997 10.6437 6.1785 11.8312C7.3595 13.0188 8.7155 13.9688 10.2465 14.6813C11.778 15.3938 13.35 15.75 14.9625 15.75Z" fill="white")
+							.header__contacts-items
+								span.header__contacts-time Пн-Пт 09:00-18:00
+								a.header__contacts-link(href='tel:+79123847007') +7 912 384-70-07
+			main.page
+				section.main
+					.main__container
+						.main__content
+							h1.main__title Цены на винтовые сваи
+							h2.main__subtitle Собственное производство всех видов конусных и винтовых свай
+							.main__body
+								.main__left
+									img.main__img(src='images/top.png' alt='' loading='lazy')
+								.main__right
+									h4.main__right-title Винтовая Свая Ø<span id='show'></span> мм (НКТ)
+									form.form(name='order', action='#', method='POST')
+										.form__item.form__item_select
+											label.form__select-label(for='diameter') <i></i> диаметр трубы:
+											.form__select
+												select#diameter(name='diameter')
+													option(value='73') 73 мм
+													option(value='89') 89 мм
+										span.form__indent
+										.form__item.form__item_select
+											label.form__select-label(for='diameterTwo') <i></i> диаметр лопасти:
+											.form__select
+												select#diameterTwo(name='diameterTwo')
+													option(value='200') 200 мм
+													option(value='250') 250 мм
+													option(value='300') 300 мм
+													option(value='350') 350 мм
+										span.form__indent
+										.form__item.form__item_select
+											label.form__select-label(for='length') <i></i> длина трубы:
+											.form__select
+												select#length(name='length')
+													option(value='1500') 1500 мм
+													option(value='2000') 2000 мм
+													option(value='2500') 2500 мм
+													option(value='3000') 3000 мм
+													option(value='3500') 3500 мм
+													option(value='4000') 4000 мм
+										span.form__indent.form__indent_last
+										.form__item
+											label.form__label(for='total') Цена:
+											input.form__input#total(type='text', name='total')
+											span.form__sale
+										.form__buttons
+											a.form__btn.btn.open-modal.modal-link(href='#modal' data-type='primary') Заказать
+											a.form__btn.btn(href='прайс сваи.xlsx' data-type='secondary' download) Скачать прайс
+										a.form__link(href='https://wa.me/79123847007?text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C.%20%D0%AF%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D1%81%D0%B2%D0%B0%D0%B8%D0%B8.%D1%80%D1%84%20' target='_blank') Не нашли нужный размер? Свяжитесь с нами для индивидуального расчета стоимости
+				section.use
+					.use__container
+						.use__content
+							h2.use__title Области применения
+							h5.use__subtitle От небольших жилых проектов до крупных коммерческих или промышленных сооружений
+							.use__body
+								article.use__card
+									.use__picture
+										img.use__img(src='images/1.png' alt='' loading='lazy')
+									h6.use__note Дома и дачи
+								article.use__card
+									.use__picture
+										img.use__img(src='images/2.png' alt='' loading='lazy')
+									h6.use__note Садовые беседки и гаражи
+								article.use__card
+									.use__picture
+										img.use__img(src='images/3.png' alt='' loading='lazy')
+									h6.use__note Складские помещения
+								article.use__card
+									.use__picture
+										img.use__img(src='images/4.png' alt='' loading='lazy')
+									h6.use__note Теплицы и парники
+				section.advantage
+					.advantage__container
+						.advantage__content
+							h2.advantage__title Преимущества использования винтовых свай
+							.advantage__body
+								.advantage__left
+									h5.advantage__subtitle Полулярный выбордля фундаментов в различных отраслях
+								.advantage__right
+									ul.advantage__list
+										li.advantage__item
+											p.advantage__text Прочный и устойчивый фундамент в различных грунтовых условиях.  Могут быть установлены быстро и легко даже в сложных грунтах, таких как скальные породы, глина или песок.
+										li.advantage__item
+											p.advantage__text Могут применяться в самых разных областях: от небольших жилых проектов до крупных коммерческих или промышленных сооружений.
+										li.advantage__item
+											p.advantage__text Спиральные сваи являются экологически чистыми. При их установке не образуются отходы земляных работ.
+				section.delivery
+					.delivery__container(data-type='delivery')
+						.delivery__content
+							.delivery__left
+								h3.delivery__title Доставка и оплата
+								.delivery__text-block
+									p.delivery__text Доставка по всей России транспортной компанией
+									p.delivery__text Оплата наличными/безналичным переводом
+								h4.delivery__subtitle Самовывоз со складов:
+								.delivery__block-address
+									.delivery__block-address-left
+										span.delivery__block-address-text г. Тюмень, ул. Старый Тобольский тракт ст. 5/2 г.
+									.delivery__block-address-right
+										span.delivery__block-address-text г. Курган, ул. Промышленная 16А
+							.delivery__right
+					.delivery__map#map
+						//#map
+						iframe(src="https://yandex.ru/map-widget/v1/?from=tabbar&ll=65.334722%2C55.472112&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjQ1NzUyMRJF0KDQvtGB0YHQuNGPLCDQmtGD0YDQs9Cw0L0sINCf0YDQvtC80YvRiNC70LXQvdC90LDRjyDRg9C70LjRhtCwLCAxNtCQIgoNYauCQhVx411C&source=serp_navig&z=16" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;")
+			footer.footer
+				.footer__container
+					.footer__content
+						.footer__body
+							.footer__left
+								h4.footer__title О нас
+								span.footer__about ООО “ЦТБ”
+								span.footer__about-requisites ИНН: 7203414338
+								span.footer__about-requisites ОГРН: 1177232008678625048
+								span.footer__indent
+								span.footer__about-address Россия, обл. Тюменская, г. Тюмень,
+								span.footer__about-address ул. Чекистов, 42, ОФ 215
+								span.footer__about-address Офис продаж +7 (3452) 38-84-90
+								//span.footer__about-address Прием металлолома:
+								//a.footer__about-address.footer__about-address--link-tel(href='tel:79199200351') +7 919-920-0351
+								a.footer__about-address.footer__about-address--link-mail(href='mailto:info@ctb72.ru') E-mail: info@ctb72.ru
+							.footer__right
+								h4.footer__title Склады
+								span.footer__warehouses-address г. Тюмень, ул. Старый Тобольский тракт ст. 5/2
+								span.footer__warehouses-address г. Курган, ул. Промышленная 16А
+						.footer__inner
+							span.footer__copy ООО “Центральная трубная база” 2021.<br> Все права защищены.
+							a.footer__policy(href='policy.html') Политика конфиденциальности
+			.whatsapp
+				.whatsapp__header
+					.whatsapp__icon
+						img.whatsapp__img(src='images/whatsapp-logo.png' alt='' loading='lazy')
+					.whatsapp__text
+						span.whatsapp__name Залимхан
+						span.whatsapp__pos Менеджер
+				.whatsapp__body
+					span.whatsapp__tooltip
+						span Есть вопросы по сваям? Мы ответим!
+						i
+					a.whatsapp__link(href='https://wa.me/79123847007?text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C.%20%D0%AF%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D1%81%D0%B2%D0%B0%D0%B8%D0%B8.%D1%80%D1%84%20' target='_blank') Написать в WhatsApp
+		section.modal
+			.modal__content
+				.modal__body
+					button.modal__close(type='button' name='close')
+						svg(width="25" height="24" viewBox="0 0 25 24")
+							path(d="M22.9411 22.2222L1.76465 1.77778M22.9411 1.77778L1.76465 22.2222" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+					h3.modal__title Заказать винтовую сваю
+					form.form#signup(name='modal-form', action='#', method='POST', autocomplete='off')
+						input(type="hidden", name="project_name", value="Винтовые сваи купить по выгодной цене")
+						input(type="hidden", name="admin_email", value="slagrach@gmail.com")
+						input(type="hidden", name="form_subject", value="Заявка")
+						.form__items
+							.form__item
+								label.form__label(for='pipe-diameter') Диаметр трубы:
+								input.form__input#pipe-diameter(type='text', name='pipe-diameter', value='')
+							.form__item
+								label.form__label(for='blade-diameter') Диаметр лопасти:
+								input.form__input#blade-diameter(type='text', name='blade-diameter', value='')
+							.form__item
+								label.form__label(for='pipe-length') Длина трубы:
+								input.form__input#pipe-length(type='text', name='pipe-length', value='')
+						.form__item.form__item_tel
+							input.form__input.form__input_tel._req#tel(type='tel', name='phone', autocomplete='off', required)
+							label.form__label(for='tel') Телефон
+						.form__item.form__item_email
+							input.form__input.form__input_email._req#mail(type='email', name='email', autocomplete='off', required)
+							label.form__label(for='mail') E-mail
+							small
+						span.form__indent
+						.form__policy
+							input.form__input.form__input_check._req#check(type='checkbox', name='policy-yes', value='yes' checked)
+							label.form__label.form__label_check(for='check') Я согласен(-на) с условиями политики конфиденциальности
+						button.form__btn.btn(type='submit', name='submit', data-type='primary') Отправить
+		.popup#popup
+			.popup__content
+				.popup__body
+					button.popup__close
+					h3.popup__title Спасибо за вашу заявку!
+					p.popup__text Мы свяжемся с вами в ближайшее время
+		script(src="js/inputmask.min.js")
+		script(src='js/form.js')
+		script(src='js/script.js')
