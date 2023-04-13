@@ -1,4 +1,5 @@
-// "use strict";
+"use strict";
+
 var isMobile = {
 	Android: function () {
 		return navigator.userAgent.match(/Android/i);
@@ -14,127 +15,11 @@ var isMobile = {
 		return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
 	}
 };
-// var x, i, j, l, ll, selElmnt, a, b, c;
-// x = document.getElementsByClassName("form__select");
-// l = x.length;
-// for (i = 0; i < l; i++) {
-// 	selElmnt = x[i].getElementsByTagName("select")[0];
-// 	ll = selElmnt.length;
-// 	a = document.createElement("DIV");
-// 	a.setAttribute("class", "select-selected");
-// 	a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-// 	x[i].appendChild(a);
-// 	b = document.createElement("DIV");
-// 	b.setAttribute("class", "select-items select-hide");
-// 	for (j = 1; j < ll; j++) {
-// 		c = document.createElement("DIV");
-// 		c.setAttribute("class", "select-item");
-// 		c.innerHTML = selElmnt.options[j].innerHTML;
-// 		c.addEventListener("click", function (e) {
-// 			var y, i, k, s, h, sl, yl;
-// 			s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-// 			sl = s.length;
-// 			h = this.parentNode.previousSibling;
-// 			for (i = 0; i < sl; i++) {
-// 				if (s.options[i].innerHTML === this.innerHTML) {
-// 					s.selectedIndex = i;
-// 					h.innerHTML = this.innerHTML;
-// 					y = this.parentNode.getElementsByClassName("same-as-selected");
-// 					yl = y.length;
-// 					for (k = 0; k < yl; k++) {
-// 						y[k].removeAttribute("class");
-// 					}
-// 					this.setAttribute("class", "same-as-selected");
-// 					break;
-// 				}
-// 			}
-// 			h.click();
-// 		});
-// 		b.appendChild(c);
-// 	}
-// 	x[i].appendChild(b);
-// 	a.addEventListener("click", function (e) {
-// 		e.stopPropagation();
-// 		closeAllSelect(this);
-// 		this.nextSibling.classList.toggle("select-hide");
-// 		this.classList.toggle("_active");
-// 	});
-// }
-// for (var jp = 0; jp < document.getElementsByClassName("select-selected").length; jp++) {
-// 	document.getElementsByClassName("select-selected")
-// 		[jp].addEventListener("click", function () {
-// 		this.parentNode.classList.toggle("_active");
-// 	});
-// }
-//
-// function closeAllSelect(elmnt) {
-// 	var x,
-// 		y,
-// 		i,
-// 		xl,
-// 		yl,
-// 		arrNo = [];
-// 	x = document.getElementsByClassName("select-items");
-// 	y = document.getElementsByClassName("select-selected");
-// 	xl = x.length;
-// 	yl = y.length;
-// 	for (i = 0; i < yl; i++) {
-// 		if (elmnt === y[i]) {
-// 			arrNo.push(i);
-// 		} else {
-// 			y[i].classList.remove("_active");
-// 		}
-// 	}
-// 	for (i = 0; i < xl; i++) {
-// 		if (arrNo.indexOf(i)) {
-// 			x[i].classList.add("select-hide");
-// 		}
-// 	}
-// }
-//
-// document.addEventListener("click", closeAllSelect);
-//
-// document.onclick = document_click;
-//
-// function document_click(e) {
-// 	let it = document.querySelectorAll('.form__select');
-// 	it.forEach((item) => {
-// 		item.classList.remove('_active');
-// 	})
-// }
 
-
-// let total = document.getElementById('total');
-// let diameter = document.getElementById('diameter');
-// let diameterTwo = document.getElementById('diameterTwo');
-// let length = document.getElementById('length');
-//
-// let sale = 10;
-// let type = diameter.value;
-// let argumentOne = diameterTwo.value;
-// let argumentTwo = length.value;
-//
-// let num = 1750;
-// let num2 = 1650;
-//
-// console.log(type);
-// diameter.addEventListener('change', function () {
-// 	if (type === 1) {
-// 		console.log('1');
-// 	} else if (type === 2) {
-// 		console.log('2');
-// 	}
-// });
-//
-//
-// let proc = sale * num / 100
-// let sum = num - proc;
-// total.value = sum + ' ₽';
-//
-// let saleNum = document.querySelector('.form__sale');
-// saleNum.innerHTML = num + ' ₽';
-
-
+// 73, 89 - диаметр трубы
+// 200,250,300,350 - диаметр лопасти
+// 1500,2000,2500,3000,3500,4000 - длина трубы
+// 1500: 1450 - второе значение после двоеточия это цена
 
 const data = {
 	73: {
@@ -151,6 +36,8 @@ const data = {
 	}
 };
 
+// размер скидки
+// в данном случае 10%
 let sale = 10;
 
 let diameter = document.getElementById("diameter");
@@ -166,9 +53,14 @@ let pipeLength = document.getElementById('pipe-length')
 
 function calc() {
 	show.innerHTML = diameter.value;
+	// получение суммы из массива с учетом выбранных параметров
 	let sum = data[diameter.value][diameterTwo.value][length.value];
-	saleNum.innerHTML = sum + " ₽";
-	total.value = sum - (sum / 100 * sale) + " ₽";
+	// saleNum.value = sum + (sum / 100 * sale) + " ₽";
+	saleNum.innerHTML = sum + (sum / 100 * sale) + " ₽";
+	// saleNum.innerHTML = sum + " ₽";
+	// расчет и вывод
+	total.value = sum + " ₽";
+	// total.value = sum + (sum / 100 * sale) + " ₽";
 
 	pipeDiameter.value = diameter.value + ' мм'
 	bladeDiameter.value = diameterTwo.value + ' мм'
@@ -217,3 +109,10 @@ const paddingTop = modalView.clientHeight;
 var root = document.querySelector('.modal__content');
 var rootStyles = getComputedStyle(root);
 root.style.setProperty('--pageHeight', (paddingTop + 443) + 'px');
+
+let localstorage;
+localstorage = JSON.stringify(data)
+// var myData = JSON.parse(data);
+console.log(localstorage);
+let sum = localstorage[1];
+console.log(sum);

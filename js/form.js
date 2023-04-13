@@ -1,4 +1,4 @@
-// "use strict"
+"use strict"
 
 document.addEventListener('DOMContentLoaded', function () {
 	const form = document.getElementById('signup');
@@ -19,8 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			});
 			if (response.ok) {
 				let result = await response.json();
-				// alert(result.message);
-				// formPreview.innerHTML = '';
 				form.reset();
 				form.classList.remove('_sending');
 				const currentPopup = document.getElementById('popup');

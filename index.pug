@@ -6,6 +6,7 @@ html(lang="zxx")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		meta(name='description' content='У нас вы можете заказать винтовые сваи с доставкой по всей России. Цены ниже рыночных на 10%. Самовывоз со склада в Тюмени и Кургане')
 		link(rel='shortcut icon' href='favicon.ico')
+		link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css")
 		link(rel="stylesheet" href="css/reset.css")
 		link(rel="stylesheet" href="css/style.css")
 		title Винтовые сваи купить по выгодной цене
@@ -33,7 +34,7 @@ html(lang="zxx")
 					.main__container
 						.main__content
 							h1.main__title Цены на винтовые сваи
-							h2.main__subtitle Собственное производство всех видов конусных и винтовых свай
+							h2.main__subtitle Собственное производство всех видов конусных и винтовых свай
 							.main__body
 								.main__left
 									img.main__img(src='images/top.png' alt='' loading='lazy')
@@ -103,7 +104,9 @@ html(lang="zxx")
 							h2.advantage__title Преимущества использования винтовых свай
 							.advantage__body
 								.advantage__left
-									h5.advantage__subtitle Полулярный выбордля фундаментов в различных отраслях
+									h5.advantage__subtitle Популярный выбор для фундаментов в различных отраслях
+									a.advantage__img(href='images/sertif.jpg' data-fancybox data-modal='true')
+										img(src='images/sertif.jpg')
 								.advantage__right
 									ul.advantage__list
 										li.advantage__item
@@ -204,6 +207,10 @@ html(lang="zxx")
 					button.popup__close
 					h3.popup__title Спасибо за вашу заявку!
 					p.popup__text Мы свяжемся с вами в ближайшее время
-		script(src="js/inputmask.min.js")
+		script(src='js/inputmask.min.js')
+		script(src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js")
+		script(src='data.json')
 		script(src='js/form.js')
 		script(src='js/script.js')
+		script.
+			Fancybox.bind("[data-fancybox]", {});
